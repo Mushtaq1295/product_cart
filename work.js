@@ -48,7 +48,16 @@ document.addEventListener('DOMContentLoaded',() =>{
 
 
     complete.addEventListener('click',function(){
-        alert("order purchased successfully!")
+        if(total>0){
+            alert("order purchased successfully!");
+            addedItems.innerHTML = '';
+            total = 0
+            End.textContent = total;
+        }else{
+            alert("select atleast one for checkout");
+        }
+
+
     })
     
 })
