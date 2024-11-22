@@ -39,9 +39,40 @@ document.addEventListener('DOMContentLoaded',() =>{
     function addProductToCart(product) {
         // Create a new div for the product
         const productDiv = document.createElement("div");
-        productDiv.textContent = product;
+        if(product === 'Product 1 - $30'){
+            productDiv.className = "item1";
+        }
+        else if(product === 'Product 2 - $80'){
+            productDiv.className = "item2";
+        }
+        else if(product === 'Product 3 - $10'){
+            productDiv.className = "item3";
+            }
+        productDiv.style.cssText = "background-color: grey; padding: 10px; margin: 5px; display: flex; justify-content: space-between; align-items: center;";
 
-        // Append the new product to the 'addedItems' container
+        const productName = document.createElement("span");
+        productName.textContent = product;
+        productDiv.appendChild(productName);
+
+        const crossIcon = document.createElement('i');
+        crossIcon.className = 'fa-solid fa-x';
+        crossIcon.style.cursor = 'pointer';
+        crossIcon.addEventListener('click',function(){
+            const c_name = productDiv.className;
+            if(c_name === 'item1'){
+                total = total - 30;
+            }
+            else if(c_name === 'item2'){
+                total = total - 80;
+            }
+            else if(c_name === 'item3'){
+                total = total - 10;
+            }
+            End.textContent = `$${total}`;
+            productDiv.remove();
+        })
+        productDiv.appendChild(crossIcon);
+
         addedItems.appendChild(productDiv);
     }
 
@@ -49,10 +80,11 @@ document.addEventListener('DOMContentLoaded',() =>{
 
     complete.addEventListener('click',function(){
         if(total>0){
-            alert("order purchased successfully!");
+            
             addedItems.innerHTML = '';
             total = 0
             End.textContent = total;
+            alert(`order purchased successfully! your total is ${total}`);
         }else{
             alert("select atleast one for checkout");
         }
