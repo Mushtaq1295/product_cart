@@ -1,4 +1,5 @@
 ---
+![image](https://github.com/user-attachments/assets/4a9fb845-d122-4224-9ac1-dfe619f58728)
 
 # Add to Cart Product Feature
 
@@ -32,12 +33,12 @@ The project consists of the following files:
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Mushtaq1295/product_cart.git
    ```
 
 2. Navigate to the project folder:
    ```bash
-   cd add-to-cart-project
+   cd product_cart
    ```
 
 3. Open the `index.html` file in your browser to view the project.
@@ -94,5 +95,3 @@ Handles the interactivity of the page:
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-Image:
-![image](https://github.com/user-attachments/assets/4a9fb845-d122-4224-9ac1-dfe619f58728)
