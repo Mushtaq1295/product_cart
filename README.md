@@ -1,7 +1,7 @@
 ---
-![image](https://github.com/user-attachments/assets/4a9fb845-d122-4224-9ac1-dfe619f58728)
-
 # Add to Cart Product Feature
+
+![image](https://github.com/user-attachments/assets/4a9fb845-d122-4224-9ac1-dfe619f58728)
 
 This project is a simple "Add to Cart" feature for an e-commerce website. It displays a list of products with prices. When a user clicks the "Add to Cart" button, the product will be added to the cart and the total will be updated accordingly.
 
